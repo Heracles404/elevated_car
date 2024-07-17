@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Status</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom right, #ff0000, #c0c0c0); /* Gradient background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 80%;
+            width: 300px; /* Adjust width as needed */
+        }
+    </style>
+    <script>
+        function fetchStatus(appID) {
+            document.getElementById('status').innerHTML = '<div class="spinner"></div>'; // Show spinner
+            fetch(`/api/get_status/${appID}`)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    document.getElementById('status').innerText = data.status;
+                    document.getElementById('error-message').innerText = ''; // Clear error message
+                })
+                .catch(error => {
+                    console.error('Error fetching status:', error);
+                    document.getElementById('status').innerText = 'Error fetching status';
+                    document.getElementById('error-message').innerText = 'Failed to fetch status'; // Display error message
+                });
+        }
+
+        function startFetchingStatus(appID) {
+            fetchStatus(appID);
+            setInterval(() => fetchStatus(appID), 1000); // Fetch status every second
+        }
+    </script>
+</head>
+<body onload="startFetchingStatus('{{ appID }}')">
+    <div class="container">
+        <h1>Status: <span id="status">Loading...</span></h1>
+        <p id="error-message" class="error-message"></p>
+    </div>
+</body>
+</html>

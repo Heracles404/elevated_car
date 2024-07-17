@@ -1,0 +1,15 @@
+arduino.ino
+    • servo can be controlled by buttons in case that the internet/local hosting failed
+    • (from node) receives number 1, 2, or 3 -> sends "x" when the movement of servo is done
+
+
+node.ino
+    • (to arduino) send 1, 2, or 3 based on the fetched origin/data from database
+        ◘ waits for "x" from the arduino before proceeding
+
+
+
+Node to Arduino - Node will wait for response "x":
+    • Line 45
+    • Line 110
+    0000000........................................................000000000000000000000000

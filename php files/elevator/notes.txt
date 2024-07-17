@@ -1,0 +1,44 @@
+	• Arduino - Emergency Button, if ever that the elevator stops in an uncertain area the button will automatically
+			make the elevator go to first floor. 
+	• DiagramHardware coding
+
+	• Servo movement
+	• Database
+		• Table 1 - id, origin, destination
+			◘ if table 1 is not empty go to `floor x` where `floor x` is equal to origin (oldest record)
+			◘ if detected in `floor x`:
+				task 1: update `origin` to zero where `origin` is equal to `floor x`
+				task 2: delete data where `origin is zero` and `destination is equal to floor x`
+
+
+Mobile App 
+	• form - user input (origin [from what floor] and destination floor [to what floor] ) -> insert to database {origin and destination}
+		◘ For every users, every device should have different unique ID (App Signature yung tawag dito sa function na gagawin ko)
+		
+		◘ Can accept values: id, origin, destination. After input, displays toast (Floor level). 
+		
+		◘ Initial Level Layouts/Functions: 
+			Level 1 - Button for 2nd and 3rd level
+			After clicking what level (2nd or 3rd - Lilipat sa table nung napili kasi mag iiba yung buttons)
+		◘ Display Elevator status: 
+			Waiting - origin not zero (wala pa laman elevator)
+			Onboard - origin 0 {may nasa elevator)
+			Arrive - origin = non existent (nasa floor na)
+		◘ Level Button Functions: Insert (BTN Name: Submit)
+			Level 1 - Button for 2nd and 3rd level
+			Level 2 - Button for 1st and 3rd level
+			Level 3 - Button for 1st and 2nd level
+		
+
+		◘ Table for monitoring (Real-time based on ID), Displays the database in mobile. 
+		
+		◘ Multiple layouts (para every button nakaka galaw) 
+		◘ Home Start Page - Logo, Button | 
+	
+
+Hardware
+	• Multilevel platform
+	• Servo
+	• laser or other sensors to detect presence of elevator
+	
+	

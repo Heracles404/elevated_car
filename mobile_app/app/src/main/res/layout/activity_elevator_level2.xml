@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/floorelevator"
+    tools:context=".ElevatorLevel2">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="85dp"
+        android:layout_marginEnd="100dp"
+        android:background="#C32522"
+        android:text=" YOU ARE CURRENTLY AT "
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.428"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/floorconfirm"
+        app:layout_constraintBottom_toTopOf="@+id/button_ConfirmFloor2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Select Origin and Destination"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup_Origin_Elevator2" />
+
+    <TextView
+        android:id="@+id/origin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:background="#40474F"
+        android:text=" Origin "
+        android:textColor="#ffffff"
+        android:textSize="19sp"
+        app:layout_constraintBottom_toTopOf="@+id/radioGroup_Destination_Elevator2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup_Origin_Elevator2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/destination"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/origin">
+
+        <RadioButton
+            android:id="@+id/OriginLevel1_Elevator2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:textColor="#ffffff" />
+
+        <RadioButton
+            android:id="@+id/OriginLevel2_Elevator2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="2"
+            android:textColor="#ffffff" />
+
+        <RadioButton
+            android:id="@+id/OriginLevel3_Elevator2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="3"
+            android:textColor="#ffffff" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/destination"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="#40474F"
+        android:text=" Destination "
+        android:textColor="#ffffff"
+        android:textSize="19sp"
+        app:layout_constraintBottom_toTopOf="@+id/radioGroup_Destination_Elevator2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup_Origin_Elevator2" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup_Destination_Elevator2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="73dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/floorconfirm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/destination">
+
+        <RadioButton
+            android:id="@+id/DestinationLevel1_Elevator2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:textColor="#ffffff" />
+
+        <RadioButton
+            android:id="@+id/DestinationLevel2_Elevator2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="2"
+            android:textColor="#ffffff" />
+
+        <RadioButton
+            android:id="@+id/DestinationLevel3_Elevator2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="3"
+            android:textColor="#ffffff" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/button_ConfirmFloor2"
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="88dp"
+        android:backgroundTint="#8F99A3"
+        android:textColor="#ffffff"
+        android:text="Confirm"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button_NotFloor2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/floorconfirm" />
+
+    <Button
+        android:id="@+id/button_NotFloor2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Exit"
+        android:backgroundTint="#8F99A3"
+        android:textColor="#ffffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button_ConfirmFloor2"
+        app:layout_constraintTop_toBottomOf="@+id/floorconfirm"
+        app:layout_constraintVertical_bias="0.0" />
+</androidx.constraintlayout.widget.ConstraintLayout>
