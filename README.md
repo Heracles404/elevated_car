@@ -1,5 +1,12 @@
-
 # Project Setup Instructions
+
+## Materials / Components Used
+1. Arduino
+2. NodeMCU
+3. Servo Motor (1)
+4. Relay Switch (2)
+5. Momentary Button (2)
+6. Connecting Wires
 
 ## Hardware Setup
 1. **Diagram Reference**: Refer to the diagram in the `hardware` folder for setup instructions.
