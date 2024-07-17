@@ -8,6 +8,12 @@
 5. Momentary Button (2)
 6. Connecting Wires
 
+## IDEs / Text Editors
+1. Arduino IDE
+2. Android Studio
+3. Notepad ++
+4. PHP Storm (optional - for php files)
+
 ## Hardware Setup
 1. **Diagram Reference**: Refer to the diagram in the `hardware` folder for setup instructions.
 2. **IP Address Configuration**:
