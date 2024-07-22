@@ -13,6 +13,7 @@
 2. Android Studio
 3. Notepad ++
 4. PHP Storm (optional - for php files)
+5. IDLE (for flask)
 
 ## Hardware Setup
 1. **Diagram Reference**: Refer to the diagram in the `hardware` folder for setup instructions.
